@@ -13,9 +13,16 @@
   font-size: 3rem;
   font-weight: 700;
   color: var(--textColor);
+  background: linear-gradient(
+    0deg,
+    var(--textColor) 0%,
+    var(--secondaryLogoColor) 100%
+  );
   flex: 1;
   margin: 0 10px;
   user-select: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 
 .social {

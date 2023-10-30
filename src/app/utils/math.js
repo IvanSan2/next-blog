@@ -3,21 +3,21 @@ function getRandomInt(min, max) {
 }
 
 export function getRandomPostShape() {
-  return `${getRandomInt(10, 20)}% ${getRandomInt(20, 30)}% ${getRandomInt(
-    20,
-    30
-  )}% ${getRandomInt(10, 20)}% / ${getRandomInt(10, 20)}% ${getRandomInt(
+  return `${getRandomInt(10, 30)}% ${getRandomInt(10, 30)}% ${getRandomInt(
     10,
-    20
-  )}% ${getRandomInt(20, 30)}% ${getRandomInt(20, 30)}%`;
+    30
+  )}% ${getRandomInt(10, 30)}% / ${getRandomInt(10, 30)}% ${getRandomInt(
+    10,
+    30
+  )}% ${getRandomInt(10, 30)}% ${getRandomInt(10, 30)}%`;
 }
 
 export function getRandomLogoShape() {
-  return `${getRandomInt(20, 30)}% ${getRandomInt(30, 70)}% ${getRandomInt(
+  return `${getRandomInt(30, 70)}% ${getRandomInt(30, 70)}% ${getRandomInt(
     30,
     70
-  )}% ${getRandomInt(20, 30)}% / ${getRandomInt(20, 30)}% ${getRandomInt(
-    20,
-    30
+  )}% ${getRandomInt(30, 70)}% / ${getRandomInt(30, 70)}% ${getRandomInt(
+    30,
+    70
   )}% ${getRandomInt(30, 70)}% ${getRandomInt(30, 70)}%`;
 }

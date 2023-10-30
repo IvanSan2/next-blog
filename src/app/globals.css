@@ -3,6 +3,7 @@
   --textColor: rgb(35, 35, 35);
   --softBg: rgb(232, 231, 226);
   --softTextColor: #353535;
+  --secondaryLogoColor: rgba(35, 35, 35, 0.7);
 }
 
 * {
@@ -32,6 +33,7 @@ a {
   --textColor: white;
   --softBg: rgb(50, 50, 50);
   --softTextColor: rgb(225, 224, 219);
+  --secondaryLogoColor: rgba(255, 255, 255, 0.7);
 }
 
 .container {
