@@ -29,23 +29,23 @@
 }
 
 .web {
-  background-color: #f6bd60aa;
+  background-color: var(--categoryWeb);
 }
 
 .mobile {
-  background-color: #e4c1f9aa;
+  background-color: var(--categoryMobile);
 }
 
 .java {
-  background-color: #84a59daa;
+  background-color: var(--categoryJava);
 }
 
 .design {
-  background-color: #f5cac3aa;
+  background-color: var(--categoryDesign);
 }
 
 .lifestyle {
-  background-color: #a9def9aa;
+  background-color: var(--categoryLifestyle);
 }
 
 @media screen and (max-width: 1280px) {

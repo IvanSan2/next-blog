@@ -4,18 +4,32 @@
   --softBg: rgb(232, 231, 226);
   --softTextColor: #353535;
   --secondaryLogoColor: rgba(35, 35, 35, 0.7);
+  --categoryJava: #84a59daa;
+  --categoryWeb: #f6bd60aa;
+  --categoryMobile: #e4c1f9aa;
+  --categoryDesign: #f5cac3aa;
+  --categoryLifestyle: #a9def9aa;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--font-poppins);
 }
 
 h1 {
   font-size: 2.5rem;
   font-family: var(--font-bartina-bold);
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: var(--font-bartina-semibold);
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-family: var(--font-bartina-semibold);
 }
 
 body {
