@@ -8,7 +8,7 @@ import { getRandomLogoShape } from "@/app/utils/math";
 const MenuPost = () => {
   return (
     <div className={styles.container}>
-      <Link href="/" className={styles.item}>
+      <Link href="/post" className={styles.item}>
         <div className={styles.imageContainer}>
           <Image
             src={p1}

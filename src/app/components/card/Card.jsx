@@ -20,7 +20,7 @@ const Card = () => {
             Web
           </span>
         </div>
-        <Link href="/">
+        <Link href="/post">
           <h2 className={styles.title}>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
           </h2>
@@ -31,7 +31,7 @@ const Card = () => {
           ipsum, aut, similique ullam, molestias iure voluptates nostrum
           reprehenderit in tempora?
         </p>
-        <Link href="/" className={styles.link}>
+        <Link href="/post" className={styles.link}>
           Read more
         </Link>
       </div>
