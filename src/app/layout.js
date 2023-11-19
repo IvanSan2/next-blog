@@ -27,8 +27,8 @@ const bartinaSemibold = localFont({
 });
 
 export const metadata = {
-  title: "Blog App",
-  description: "The best blog app!",
+  title: "FullstackLife Blog",
+  description: "FullstackLife - Fullstack developer personal blog",
 };
 
 export default function RootLayout({ children }) {
