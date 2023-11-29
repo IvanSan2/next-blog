@@ -1,4 +1,5 @@
 .item {
+  width: fit-content;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -44,7 +45,7 @@
   color: gray;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .imageContainer {
     display: none;
   }
