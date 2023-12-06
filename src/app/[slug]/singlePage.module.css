@@ -1,23 +1,29 @@
 .infoContainer {
-  display: flex;
-  align-items: center;
-  gap: 50px;
 }
 
 .textContainer {
-  flex: 1;
+  padding: 40px 50px 10px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .title {
+  color: white;
   font-size: 64px;
   font-weight: 700;
   margin-bottom: 50px;
+  z-index: 1;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(0, 0, 0),
+    0 0 0.2em rgba(0, 0, 0, 0.702);
 }
 
 .user {
   display: flex;
   align-items: center;
   gap: 20px;
+  z-index: 3;
 }
 
 .userImage {
@@ -35,13 +41,46 @@
 .username {
   font-size: 18px;
   font-weight: 700;
-  color: var(--textColor);
+  color: white;
+  text-shadow: 1px 1px 4px rgb(0, 0, 0);
+}
+
+.date {
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  text-shadow: 1px 1px 3px rgb(0, 0, 0);
 }
 
 .imageContainer {
-  flex: 1;
-  height: 350px;
+  flex: 2;
+  height: 450px;
   position: relative;
+  overflow: hidden;
+}
+
+.imageContainer:after {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.6)
+  ) !important;
+  filter: opacity(1);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 
 .userTextContainer {
@@ -49,10 +88,6 @@
   flex-direction: column;
   gap: 5px;
   color: var(--softTextColor);
-}
-
-.image {
-  object-fit: cover;
 }
 
 .content {
@@ -70,4 +105,38 @@
   line-height: 1.5;
   color: var(--softTextColor);
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .title {
+    font-size: 56px;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 20px;
+    display: grid;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 48px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .title {
+    font-size: 42px;
+  }
+
+  .imageContainer {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 36px;
+  }
 }

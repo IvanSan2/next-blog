@@ -62,17 +62,18 @@
   .title {
     font-size: 64px;
   }
+  .post {
+    flex-direction: column;
+    gap: 20px;
+    display: grid;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .title {
     font-size: 56px;
   }
-  .post {
-    flex-direction: column;
-    gap: 20px;
-    display: grid;
-  }
+
   .imgContainer {
     height: 300px;
   }

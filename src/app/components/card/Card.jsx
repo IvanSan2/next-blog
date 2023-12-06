@@ -3,12 +3,19 @@ import styles from "./card.module.css";
 import Image from "next/image";
 import image from "../../../../public/p1.jpeg";
 import Link from "next/link";
+import { getRandomPostShape } from "../../utils/math";
 
 const Card = () => {
   return (
     <div className={styles.container}>
       <div className={styles.imageContainer}>
-        <Image src={image} alt="" fill className={styles.image} />
+        <Image
+          src={image}
+          alt=""
+          fill
+          className={styles.image}
+          style={{ borderRadius: getRandomPostShape() }}
+        />
       </div>
       <div className={styles.textContainer}>
         <div className={styles.detail}>
