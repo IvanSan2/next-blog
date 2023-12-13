@@ -1,9 +1,9 @@
 :root {
   --bg: white;
-  --textColor: rgb(35, 35, 35);
-  --softBg: rgb(232, 231, 226);
+  --textColor: #232323;
+  --softBg: #e8e7e2;
   --softTextColor: #353535;
-  --secondaryLogoColor: rgba(35, 35, 35, 0.7);
+  --secondaryLogoColor: #232323b3;
   --categoryJava: #84a59daa;
   --categoryWeb: #f6bd60aa;
   --categoryMobile: #e4c1f9aa;
@@ -43,11 +43,11 @@ a {
 }
 
 .dark {
-  --bg: rgb(35, 35, 35);
+  --bg: #232323;
   --textColor: white;
-  --softBg: rgb(50, 50, 50);
-  --softTextColor: rgb(225, 224, 219);
-  --secondaryLogoColor: rgba(255, 255, 255, 0.7);
+  --softBg: #323232;
+  --softTextColor: #e1e0db;
+  --secondaryLogoColor: #ffffffb3;
 }
 
 .container {

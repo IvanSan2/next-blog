@@ -22,7 +22,9 @@ const NavBar = () => {
         <Image src={linkedin} alt="linkedin" width={24} height={24} />
         <Image src={github} alt="github" width={24} height={24} />
       </div>
-      <div className={styles.logo}>FullstackLife</div>
+      <Link href="/" className={styles.logo}>
+        FullstackLife
+      </Link>
       <div className={styles.links}>
         <ThemeToggle />
         <Link href="/" className={styles.link}>

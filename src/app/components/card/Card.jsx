@@ -14,7 +14,10 @@ const Card = () => {
           alt=""
           fill
           className={styles.image}
-          style={{ borderRadius: getRandomPostShape() }}
+          style={{
+            borderRadius: getRandomPostShape(),
+            transition: "all 1s ease-out 0.4s",
+          }}
         />
       </div>
       <div className={styles.textContainer}>
