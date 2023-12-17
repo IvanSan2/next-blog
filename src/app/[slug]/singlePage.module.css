@@ -129,6 +129,10 @@
   .title {
     font-size: 42px;
   }
+
+  .imageContainer {
+    height: 400px;
+  }
 }
 
 @media screen and (max-width: 480px) {
