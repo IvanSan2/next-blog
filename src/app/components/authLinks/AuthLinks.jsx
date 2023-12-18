@@ -1,13 +1,17 @@
 "use client";
-import React from "react";
+
 import styles from "./authLinks.module.css";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import Image from "next/image";
+import plusIcon from "../../../../public/plus_icon.svg";
+import { ThemeContext } from "@/app/context/ThemeContext";
 
 const AuthLinks = () => {
   const [open, setOpen] = useState(false);
+  const { theme } = useContext(ThemeContext);
 
-  const status = "notauthenticated";
+  const status = "authenticated";
   return (
     <>
       {status === "notauthenticated" ? (
@@ -19,7 +23,16 @@ const AuthLinks = () => {
       ) : (
         <>
           <Link href="/write" className={styles.link}>
-            Write
+            <Image
+              src={plusIcon}
+              width={24}
+              height={24}
+              alt="New Post"
+              style={{
+                filter: theme === "dark" ? "invert(1)" : "invert(0)",
+              }}
+              className={styles.plusIcon}
+            />
           </Link>
           <Link href="/logout" className={styles.link}>
             Logout
