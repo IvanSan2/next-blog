@@ -101,10 +101,11 @@
 }
 
 .description p {
-  font-size: 18px;
-  /* line-height: 1.5; */
+  font-size: 1.5rem;
+
+  line-height: 1.2;
   color: var(--softTextColor);
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -123,11 +124,17 @@
   .title {
     font-size: 48px;
   }
+  .description p {
+    font-size: 1.3rem;
+  }
 }
 
 @media screen and (max-width: 640px) {
   .title {
     font-size: 42px;
+  }
+  .description p {
+    font-size: 1.2rem;
   }
 }
 

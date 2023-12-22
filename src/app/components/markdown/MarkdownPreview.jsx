@@ -1,12 +1,13 @@
 import Markdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
 import remarkGfm from "remark-gfm";
+
 import { useContext } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
 import styles from "./markdownPreview.module.css";
 import { useEffect } from "react";
 
-export default function MarkdownPreview() {
+export default function MarkdownPreview(value) {
   const { theme } = useContext(ThemeContext);
 
   useEffect(() => {
@@ -219,7 +220,7 @@ public class Application {
           },
         }}
       >
-        {markdown}
+        {value.value?.length > 0 ? value.value : markdown}
       </Markdown>
     </div>
   );
