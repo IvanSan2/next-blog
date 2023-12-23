@@ -1,6 +1,7 @@
 import Markdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
 import remarkGfm from "remark-gfm";
+import rehypeAttrs from "rehype-attr";
 
 import { useContext } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
@@ -201,7 +202,7 @@ public class Application {
   return (
     <div className={styles.container}>
       <Markdown
-        rehypePlugins={[rehypeHighlight, remarkGfm]}
+        rehypePlugins={[rehypeHighlight, remarkGfm, rehypeAttrs]}
         components={{
           code: ({ node, inline, className, children, ...props }) => {
             const match = /language-(\w+)/.exec(className || "");

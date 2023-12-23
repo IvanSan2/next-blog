@@ -2660,7 +2660,7 @@ regexp.prototype.flags@^1.4.3, regexp.prototype.flags@^1.5.0:
     define-properties "^1.2.0"
     functions-have-names "^1.2.3"
 
-rehype-attr@~3.0.1:
+rehype-attr@^3.0.3, rehype-attr@~3.0.1:
   version "3.0.3"
   resolved "https://registry.npmjs.org/rehype-attr/-/rehype-attr-3.0.3.tgz"
   integrity sha512-Up50Xfra8tyxnkJdCzLBIBtxOcB2M1xdeKe1324U06RAvSjYm7ULSeoM+b/nYPQPVd7jsXJ9+39IG1WAJPXONw==
