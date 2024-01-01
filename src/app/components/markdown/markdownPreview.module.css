@@ -1,6 +1,7 @@
 .container {
   background-color: var(--bg);
   color: var(--textColor);
+  line-height: 1.5;
 }
 
 .container h1 {

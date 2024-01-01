@@ -12,8 +12,9 @@
 }
 
 .responsiveMenu {
-  position: absolute;
-  z-index: 5;
+  /* position: absolute; */
+  position: fixed;
+  z-index: 100;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,8 +25,10 @@
   left: 0;
   width: 100%;
   height: calc(100vh - 100px);
-  background-color: var(--softBg);
   border-radius: 10px;
+  /* background-color: var(--softBg); */
+  background-color: var(--responsiveMenuColor);
+  backdrop-filter: blur(15px);
 }
 
 .line {
