@@ -2,10 +2,15 @@
 import Image from "next/image";
 import styles from "./comments.module.css";
 import userImage from "@/../../public/fashion.png";
-import sendIcon from "@/../../icons/send-svgrepo-com.svg";
 import { useState } from "react";
+import { useContext } from "react";
+import { ThemeContext } from "../../context/ThemeContext";
+import HeartIcon from "../icons/HeartIcon";
+import SendIcon from "../icons/SendIcon";
 
 const Comments = () => {
+  const { theme } = useContext(ThemeContext);
+
   const [placeholder, setPlaceholder] = useState("Write your comment...");
 
   // A function to handle the focus event
@@ -35,12 +40,10 @@ const Comments = () => {
           <div className={styles.formBar}>
             <div className={styles.utilsContainer}></div>
             <button className={styles.button}>
-              <Image
-                className={styles.commentIcon}
-                src={sendIcon}
-                alt="Send message"
+              <SendIcon
+                fillColor={"var(--textColor)"}
                 width={24}
-                height={24}
+                className={styles.commentIcon}
               />
             </button>
           </div>
@@ -77,6 +80,16 @@ const Comments = () => {
               voluptatum, voluptatem, quia quos iusto doloremque voluptas quas
               quod fugit voluptatibus.
             </p>
+            <div className={styles.likeContainer}>
+              <div className={styles.likes}>
+                <div className={styles.likeButton}>
+                  <HeartIcon fillColor={"var(--textColor)"} width={24} />
+                </div>
+                <div className={styles.likesCount}>
+                  {/*Insert likes count*/ 173}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -101,6 +114,16 @@ const Comments = () => {
               quibusdam, voluptatum, voluptatem, quia quos iusto doloremque
               voluptas quas quod fugit voluptatibus.
             </p>
+            <div className={styles.likeContainer}>
+              <div className={styles.likes}>
+                <div className={styles.likeButton}>
+                  <HeartIcon fillColor={"red"} width={24} />
+                </div>
+                <div className={styles.likesCount}>
+                  {/*Insert likes count*/ 4}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
