@@ -57,103 +57,31 @@
 
 .login {
   margin-left: 1rem;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 4px;
-  background-color: #ccc;
-  color: #fff;
-  cursor: pointer;
+  padding: 2.5rem 1rem;
+  border: var(--softBg) 2px dashed;
+  border-radius: 10px;
   margin-bottom: 50px;
 }
 .loginText {
   margin-left: 1rem;
   padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 4px;
-  background-color: #ccc;
-  color: #fff;
-  cursor: pointer;
+  font-style: italic;
+  cursor: default;
 }
 .loginButton {
+  font-size: medium;
   margin-left: 1rem;
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 4px;
-  background-color: #ccc;
+  background-color: var(--softBg);
   color: #fff;
   cursor: pointer;
 }
+
 .comments {
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-}
-.comment {
-  display: flex;
-}
-.userImageContainer {
-  flex-shrink: 0;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  overflow: hidden;
-  position: relative;
-  cursor: pointer;
-}
-.userImage {
-  object-fit: cover;
-}
-.commentContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin-left: 1rem;
-  background-color: var(--softBg);
-  padding: 15px;
-  border-radius: 20px;
-}
-.user {
-  width: fit-content;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-}
-.username {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--textColor);
-}
-.userDate {
-  font-size: 0.8rem;
-  color: var(--softTextColor);
-}
-
-.likeContainer {
-  position: relative;
-}
-
-.likes {
-  position: absolute;
-  right: 0;
-  display: flex;
-  align-items: center;
-  background-color: var(--softBg);
-  padding: 0px 10px;
-  gap: 10px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  color: var(--softTextColor);
-}
-
-.likeButton {
-  border: none;
-  background-color: #ffffff00;
-  cursor: pointer;
-}
-
-.likesCount {
-  font-weight: bold;
-  cursor: default;
 }

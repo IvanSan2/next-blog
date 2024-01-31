@@ -1,12 +1,12 @@
 "use client";
-import Image from "next/image";
 import styles from "./comments.module.css";
 import userImage from "@/../../public/fashion.png";
 import { useState } from "react";
 import { useContext } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
-import HeartIcon from "../icons/HeartIcon";
 import SendIcon from "../icons/SendIcon";
+import Link from "next/link";
+import Comment from "../comment/Comment";
 
 const Comments = () => {
   const { theme } = useContext(ThemeContext);
@@ -53,79 +53,47 @@ const Comments = () => {
           <span className={styles.loginText}>
             You need to be logged in to comment
           </span>
-          <button className={styles.loginButton}>Login</button>
+
+          <Link className={styles.loginButton} href="/">
+            Login
+          </Link>
         </div>
       )}
       <div className={styles.comments}>
-        <div className={styles.comment}>
-          <div className={styles.userImageContainer}>
-            <Image
-              src={userImage}
-              alt=""
-              width={50}
-              height={50}
-              className={styles.userImage}
-            />
-          </div>
-
-          <div className={styles.commentContainer}>
-            <div className={styles.user}>
-              <span className={styles.username}>User</span>
-              <span className={styles.userDate}>01.01.2023</span>
-            </div>
-            <p className={styles.commentText}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              quibusdam, voluptatum, voluptatem, quia quos iusto doloremque
-              voluptas quas quod fugit voluptatibus. Quisquam quibusdam,
-              voluptatum, voluptatem, quia quos iusto doloremque voluptas quas
-              quod fugit voluptatibus.
-            </p>
-            <div className={styles.likeContainer}>
-              <div className={styles.likes}>
-                <div className={styles.likeButton}>
-                  <HeartIcon fillColor={"var(--textColor)"} width={24} />
-                </div>
-                <div className={styles.likesCount}>
-                  {/*Insert likes count*/ 173}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.comment}>
-          <div className={styles.userImageContainer}>
-            <Image
-              src={userImage}
-              alt=""
-              width={50}
-              height={50}
-              className={styles.userImage}
-            />
-          </div>
-
-          <div className={styles.commentContainer}>
-            <div className={styles.user}>
-              <span className={styles.username}>User</span>
-              <span className={styles.userDate}>01.01.2023</span>
-            </div>
-            <p className={styles.commentText}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              quibusdam, voluptatum, voluptatem, quia quos iusto doloremque
-              voluptas quas quod fugit voluptatibus.
-            </p>
-            <div className={styles.likeContainer}>
-              <div className={styles.likes}>
-                <div className={styles.likeButton}>
-                  <HeartIcon fillColor={"red"} width={24} />
-                </div>
-                <div className={styles.likesCount}>
-                  {/*Insert likes count*/ 4}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Comment
+          liked={true}
+          userImage={userImage}
+          username={"Salamana Karamba"}
+          date={"6 hours ago"}
+          likesCount={7}
+          text={"I like this post so much! OMG!!!"}
+        />
+        <Comment
+          liked={false}
+          userImage={userImage}
+          username={"Some Random Guy"}
+          date={"2 hours ago"}
+          likesCount={0}
+          text={"Not bad, but I think it could be better."}
+        />
+        <Comment
+          liked={true}
+          userImage={userImage}
+          username={"Mary Jane"}
+          date={"5 days ago"}
+          likesCount={75}
+          text={"Peter Parker? Is that you? I love you!"}
+        />
+        <Comment
+          liked={false}
+          userImage={userImage}
+          username={"John Doe"}
+          date={"1 week ago"}
+          likesCount={641}
+          text={
+            "Get out of here, you spammer! You are not welcome here! I hate you! Go away! I will call the police! I will call the FBI! I will call the CIA! I will call the KGB! I will call the NSA! I will call the MI6! I will call the Mossad!"
+          }
+        />
       </div>
     </div>
   );

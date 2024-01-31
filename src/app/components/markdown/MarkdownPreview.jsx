@@ -12,11 +12,15 @@ export default function MarkdownPreview(value) {
   const { theme } = useContext(ThemeContext);
 
   useEffect(() => {
-    if (theme === "dark") {
-      import("highlight.js/styles/a11y-dark.css");
-    } else {
-      import("highlight.js/styles/a11y-light.css");
-    }
+    const importCss = async () => {
+      if (theme === "dark") {
+        await import("highlight.js/styles/a11y-dark.css");
+      } else {
+        await import("highlight.js/styles/a11y-light.css");
+      }
+    };
+
+    importCss();
   }, [theme]);
 
   const markdown = `# Hi, *Pluto*!

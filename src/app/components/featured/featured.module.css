@@ -8,50 +8,6 @@
   font-family: var(--font-bartina-regular);
 }
 
-.post {
-  margin-top: 60px;
-  display: flex;
-  align-items: center;
-  gap: 50px;
-}
-
-.imgContainer {
-  flex: 1;
-  height: 500px;
-  position: relative;
-}
-
-.image {
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.textContainer {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.postTitle {
-  font-size: 40px;
-  font-family: var(--font-bartina-semibold);
-}
-
-.postDesc {
-  font-size: 20px;
-  font-weight: 300;
-  color: var(--softTextColor);
-}
-
-.button {
-  padding: 16px 20px;
-  border: none;
-  border-radius: 5px;
-  width: max-content;
-  font-size: 14px;
-}
-
 @media screen and (max-width: 1280px) {
   .title {
     font-size: 72px;

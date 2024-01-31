@@ -1,41 +1,48 @@
 import React from "react";
 import styles from "./featured.module.css";
-import Image from "next/image";
 import p1 from "../../../../public/p1.jpeg";
-import { getRandomPostShape } from "../../utils/math.js";
+import FeaturedSlider from "../featuredSlider/FeaturedSlider";
 
 const Featured = () => {
+  const slides = [
+    {
+      id: 1,
+      title: "Lorem ipsum.",
+      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, quam nisi magni ea laborum inventore voluptatum laudantium repellat ducimus unde aspernatur fuga. Quo, accusantium quisquam! Harum unde sit culpa debitis.",
+      img: p1,
+    },
+    {
+      id: 2,
+      title: "Lorem ipsum dolor.",
+      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, quam nisi magni ea laborum inventore voluptatum laudantium repellat ducimus unde aspernatur fuga. Quo, accusantium quisquam! Harum unde sit culpa debitis.",
+      img: p1,
+    },
+    {
+      id: 3,
+      title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, quam nisi magni ea laborum inventore voluptatum laudantium repellat ducimus unde aspernatur fuga. Quo, accusantium quisquam! Harum unde sit culpa debitis.",
+      img: p1,
+    },
+    {
+      id: 4,
+      title: "Lorem ipsum dolor sit 4.",
+      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, quam nisi magni ea laborum inventore voluptatum laudantium repellat ducimus unde aspernatur fuga. Quo, accusantium quisquam! Harum unde sit culpa debitis.",
+      img: p1,
+    },
+    {
+      id: 5,
+      title: "Lorem.",
+      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, quam nisi magni ea laborum inventore voluptatum laudantium repellat ducimus unde aspernatur fuga. Quo, accusantium quisquam! Harum unde sit culpa debitis.",
+      img: p1,
+    },
+  ];
+
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>
         <b>Hey!</b> Discover my stories and creative ideas.
       </h1>
-      <div className={styles.post}>
-        <div className={styles.imgContainer}>
-          <Image
-            src={p1}
-            alt=""
-            fill
-            className={styles.image}
-            style={{
-              transition: "all 1s ease-out 0.4s",
-              borderRadius: getRandomPostShape(),
-            }}
-          />
-        </div>
-        <div className={styles.textContainer}>
-          <h1 className={styles.postTitle}>
-            Lorem ipsum dolor sit amet alim consectetur adipisicing elit.
-          </h1>
-          <p className={styles.postDesc}>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Cupiditate, quam nisi magni ea laborum inventore voluptatum
-            laudantium repellat ducimus unde aspernatur fuga. Quo, accusantium
-            quisquam! Harum unde sit culpa debitis.
-          </p>
-          <button className={styles.button}>Read More</button>
-        </div>
-      </div>
+      <FeaturedSlider slides={slides} />
     </div>
   );
 };

@@ -142,11 +142,24 @@
 
 @media screen and (max-width: 640px) {
   .container {
-    max-width: calc(480px - 4rem);
+    max-width: 420px;
+    padding: 0 0.5rem;
   }
 }
 
 @media screen and (max-width: 475px) {
+  .container {
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    max-width: 350px;
+  }
+}
+
+@media screen and (max-width: 390px) {
   .container {
     max-width: 320px;
   }
