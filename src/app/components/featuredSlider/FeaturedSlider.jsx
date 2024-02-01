@@ -42,7 +42,7 @@ export default function FeaturedSlider({ slides }) {
     return () => clearInterval(interval);
   }, [currentIndex]);
 
-  //TODO: add swiper effect to the slider
+  //TODO: add swipe effect to the slider
 
   return (
     <div className={styles.container} ref={ref}>

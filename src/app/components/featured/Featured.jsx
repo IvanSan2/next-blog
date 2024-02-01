@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./featured.module.css";
 import p1 from "../../../../public/p1.jpeg";
+import whiteImage from "../../../../public/white.jpg";
 import FeaturedSlider from "../featuredSlider/FeaturedSlider";
 
 const Featured = () => {
@@ -31,9 +32,10 @@ const Featured = () => {
     },
     {
       id: 5,
-      title: "Lorem.",
+      title:
+        "Lorem ipsum dolor sit 5. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, quam nisi magni ea laborum inventore voluptatum laudantium repellat ducimus unde aspernatur fuga. Quo, accusantium quisquam! Harum unde sit culpa debitis.",
       desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, quam nisi magni ea laborum inventore voluptatum laudantium repellat ducimus unde aspernatur fuga. Quo, accusantium quisquam! Harum unde sit culpa debitis.",
-      img: p1,
+      img: whiteImage,
     },
   ];
 
