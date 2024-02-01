@@ -18,6 +18,7 @@ const MenuPost = () => {
             style={{ borderRadius: getRandomLogoShape() }}
           ></Image>
         </div>
+
         <div className={styles.textContainer}>
           <span
             className={styles.category}
@@ -25,6 +26,7 @@ const MenuPost = () => {
           >
             Java
           </span>
+
           <h3 className={styles.postTitle}>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
           </h3>

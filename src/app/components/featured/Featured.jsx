@@ -40,7 +40,10 @@ const Featured = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>
-        <b>Hey!</b> Discover my stories and creative ideas.
+        <b>
+          Welcome to <span className={styles.logo}>FullStackLife</span> blog:
+        </b>{" "}
+        where developers share knowledge
       </h1>
       <FeaturedSlider slides={slides} />
     </div>

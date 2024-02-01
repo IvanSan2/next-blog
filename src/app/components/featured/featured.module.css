@@ -6,6 +6,19 @@
   font-size: 96px;
   font-weight: 300;
   font-family: var(--font-bartina-regular);
+  margin-bottom: 20px;
+}
+
+.logo {
+  color: var(--textColor);
+  background: linear-gradient(
+    0deg,
+    var(--textColor) 0%,
+    var(--secondaryLogoColor) 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 @media screen and (max-width: 1280px) {

@@ -1,15 +1,11 @@
 import styles from "./featuredSlide.module.css";
 import Image from "next/image";
-import { getRandomPostPageShape } from "../../utils/math";
 
 export default function FeaturedSlide({ slide }) {
   return (
     <div className={styles.container}>
       <div className={styles.infoContainer}>
-        <div
-          className={styles.imageContainer}
-          style={{ borderRadius: getRandomPostPageShape() }}
-        >
+        <div className={styles.imageContainer}>
           <Image src={slide.img} alt="" fill className={styles.image} />
           <div className={styles.textContainer}>
             {/* max 70 symbols for title */}

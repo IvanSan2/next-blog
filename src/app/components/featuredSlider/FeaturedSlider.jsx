@@ -2,16 +2,22 @@
 import styles from "./featuredSlider.module.css";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import FeaturedSlide from "../featuredSlide/FeaturedSlide";
+import { getRandomLogoShape } from "../../utils/math";
 
 export default function FeaturedSlider({ slides }) {
+  // ref - to get the width of the slider container
   const ref = useRef(null);
+  // current index of the slide
   const [currentIndex, setCurrentIndex] = useState(0);
+  // width of the slider container
   const [sliderWidth, setSliderWidth] = useState(0);
 
+  // get the width of the slider container on mount
   useLayoutEffect(() => {
     setSliderWidth(ref.current.clientWidth);
   }, []);
 
+  // get the width of the slider container on resize
   useEffect(() => {
     function handleResize() {
       setSliderWidth(ref.current.clientWidth);
@@ -20,6 +26,23 @@ export default function FeaturedSlider({ slides }) {
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  // auto scroll
+  function autoScroll() {
+    if (currentIndex === slides.length - 1) {
+      setCurrentIndex(0);
+    } else {
+      setCurrentIndex(currentIndex + 1);
+    }
+  }
+
+  // auto scroll every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(autoScroll, 5000);
+    return () => clearInterval(interval);
+  }, [currentIndex]);
+
+  //TODO: add swiper effect to the slider
 
   return (
     <div className={styles.container} ref={ref}>
@@ -40,7 +63,10 @@ export default function FeaturedSlider({ slides }) {
       <div className={styles.arrowContainer}>
         <div
           className={styles.arrowLeft}
-          style={{ display: currentIndex === 0 && "none" }}
+          style={{
+            borderRadius: `${getRandomLogoShape()}`,
+            display: currentIndex === 0 && "none",
+          }}
           onClick={() => setCurrentIndex(currentIndex - 1)}
         >
           ❰
@@ -48,6 +74,7 @@ export default function FeaturedSlider({ slides }) {
         <div
           className={styles.arrowRight}
           style={{
+            borderRadius: `${getRandomLogoShape()}`,
             display: currentIndex === slides.length - 1 && "none",
           }}
           onClick={() => setCurrentIndex(currentIndex + 1)}
