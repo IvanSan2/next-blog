@@ -1,10 +1,8 @@
 "use client";
 import React, { use } from "react";
 import styles from "./featured.module.css";
-// import p1 from "../../../../public/p1.jpeg";
-// import whiteImage from "../../../../public/white.jpg";
 import FeaturedSlider from "../featuredSlider/FeaturedSlider";
-import { useEffect, useState, useMountEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Featured = () => {
   // const slides = [
@@ -58,6 +56,7 @@ const Featured = () => {
         setLoading(false);
       } catch (error) {
         setError(error);
+        console.log(error);
         setLoading(false);
       }
     };
@@ -72,8 +71,9 @@ const Featured = () => {
         </b>{" "}
         where developers share knowledge
       </h1>
-      {loading ? <h1>Loading...</h1> : null}
-      {error ? <h1>Error: {error.message}</h1> : null}
+      {loading ? <div className={styles.sliderSkeleton}></div> : null}
+      {error ? <div className={styles.error}>{error.message}</div> : null}
+
       <FeaturedSlider slides={posts} />
     </div>
   );
